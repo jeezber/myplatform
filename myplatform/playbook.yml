@@ -1,0 +1,22 @@
+---
+- hosts: all
+  become: true
+  roles:
+     - basic
+
+- hosts: webserver
+  become: true
+  roles:
+     - webserver
+
+
+- name: Create a PostgreSQL DB server
+  hosts: dbserver
+  become: true
+  become_user: root
+  remote_user: root
+  vars_files:
+    - roles/dbserver/vars/main.yml
+
+  roles:
+  - dbserver

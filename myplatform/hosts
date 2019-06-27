@@ -1,0 +1,2 @@
+dbserver	ansible_user=db
+webserver	ansible_user=web

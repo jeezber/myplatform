@@ -1,0 +1,6 @@
+- name: ^installing webserver software^
+  apt: name={{item}}
+  with_items:
+  - apache2
+
+
