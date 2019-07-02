@@ -1,4 +1,4 @@
 ---
-db_user: jonas
+db_user: postgres
 db_name: testdb
 db_password: admin
